@@ -1,0 +1,182 @@
+log_text,category,severity,impact_scope,user_count,affected_services_count,service_scope,resolution
+User unable to login to VPN after password reset,Authentication,Medium,Single User,1,1,Single Service,Reset password and verify VPN access policy
+Employee cannot complete MFA during login to payroll portal,Authentication,Medium,Single User,1,1,Single Service,Check MFA enrollment and unlock account
+One contractor account is locked after repeated login attempts,Authentication,Low,Single User,1,1,Single Service,Unlock account and verify credentials
+User reports sign in failure on finance dashboard,Authentication,Medium,Single User,1,1,Single Service,Validate SSO mapping and reissue session
+Single employee cannot access SSO portal after password update,Authentication,Medium,Single User,1,1,Single Service,Sync directory credentials and retest login
+Remote worker unable to authenticate into HR application,Authentication,Medium,Single User,1,1,Single Service,Review IdP logs and reset user auth factors
+MFA push approval not arriving for one employee,Authentication,Low,Single User,1,1,Single Service,Check MFA notification channel and device registration
+One new hire cannot sign in to onboarding portal,Authentication,Low,Single User,1,1,Single Service,Verify account provisioning and role assignment
+
+Multiple users unable to login due to repeated MFA failures,Authentication,High,Multiple Users,8,1,Single Service,Check MFA service health and unlock affected accounts
+Several employees cannot access SSO for expense application,Authentication,High,Multiple Users,12,1,Single Service,Inspect identity provider logs and application trust settings
+VPN authentication failures reported by remote sales staff,Authentication,High,Multiple Users,15,1,Single Service,Review VPN gateway auth integration and certificate validity
+Many users unable to sign in to intranet after policy update,Authentication,High,Multiple Users,18,1,Single Service,Rollback authentication policy and validate SSO rules
+Login failures reported across payroll users after MFA change,Authentication,High,Multiple Users,10,2,Multiple Services,Check MFA configuration and dependent identity services
+Several users cannot authenticate to both HR and payroll apps,Authentication,High,Multiple Users,14,2,Multiple Services,Inspect shared IdP outage and validate federation settings
+
+All employees unable to access SSO portal,Authentication,Critical,System Wide,450,4,Core Platform,Fail over identity provider and restore core authentication platform
+Organization wide authentication outage affecting all internal apps,Authentication,Critical,System Wide,600,5,Core Platform,Restore IdP service and incident bridge with platform team
+Corporate login platform unavailable across VPN email and HR tools,Authentication,Critical,System Wide,520,4,Core Platform,Recover authentication cluster and validate dependency health
+Company wide MFA outage blocking all employee logins,Authentication,Critical,System Wide,700,4,Core Platform,Rollback MFA change and restore authentication service
+
+User cannot reach internal file share from workstation,Network,Low,Single User,1,1,Single Service,Check local network adapter and DNS settings
+One employee reports packet loss on VPN session,Network,Medium,Single User,1,1,Single Service,Validate VPN tunnel stability and endpoint connectivity
+Single user cannot resolve internal hostnames,Network,Medium,Single User,1,1,Single Service,Flush DNS cache and verify DNS server response
+Remote employee cannot connect to office Wi-Fi guest portal,Network,Low,Single User,1,1,Single Service,Check wireless credentials and captive portal configuration
+User reports intermittent network drops during Teams call,Network,Low,Single User,1,1,Single Service,Inspect local NIC and network path quality
+One workstation cannot access internet after IP renewal,Network,Low,Single User,1,1,Single Service,Review DHCP assignment and local routing
+
+Branch office internet connection down affecting all users,Network,Critical,Department Wide,65,2,Multiple Services,Check ISP outage and switch to backup link
+High packet loss observed across WAN link for finance team,Network,High,Department Wide,40,2,Multiple Services,Inspect WAN circuit errors and provider status
+DNS resolution failing for internal services in one office,Network,High,Department Wide,55,2,Multiple Services,Validate DNS server health and replication
+VPN users reporting disconnects during peak hours,Network,High,Multiple Users,20,1,Single Service,Check VPN gateway load and session limits
+Firewall rule change blocking outbound traffic for multiple teams,Network,High,Department Wide,75,3,Multiple Services,Review firewall policy and restore allowed routes
+Network latency spike affecting ERP and CRM traffic,Network,High,Department Wide,48,2,Multiple Services,Analyze route congestion and prioritize business traffic
+
+Corporate WAN outage impacting all regional offices,Network,Critical,System Wide,800,4,Core Platform,Engage network operations and fail over core WAN
+Core DNS outage affecting access to multiple internal platforms,Network,Critical,System Wide,550,4,Core Platform,Restore DNS cluster and reroute name resolution
+Enterprise firewall failure disrupting internet and VPN access,Network,Critical,System Wide,620,4,Core Platform,Recover firewall pair and validate external connectivity
+Company wide network instability impacting email VPN and ERP,Network,Critical,System Wide,900,5,Core Platform,Stabilize backbone routing and isolate failing edge devices
+
+Azure VM not responding to SSH requests,Infrastructure,High,Single User,1,1,Single Service,Check VM power state NSG rules and guest agent
+Single application server CPU usage exceeded 95 percent,Infrastructure,Medium,Single User,1,1,Single Service,Inspect workload and right size compute resources
+Disk space above 90 percent on one database node,Infrastructure,High,Single User,1,1,Single Service,Clear unused files and extend storage if needed
+One Linux host rebooted unexpectedly overnight,Infrastructure,Medium,Single User,1,1,Single Service,Review system logs and scheduled tasks
+Single VM shows memory exhaustion after deployment,Infrastructure,Medium,Single User,1,1,Single Service,Analyze process memory leak and restart service
+One storage volume became read only on backup server,Infrastructure,High,Single User,1,1,Single Service,Check disk health and remount storage safely
+
+Two application servers unhealthy behind load balancer,Infrastructure,High,Multiple Users,16,2,Multiple Services,Replace unhealthy instances and inspect deployment changes
+Cluster node failure affecting web and API services,Infrastructure,High,Multiple Users,22,2,Multiple Services,Rebalance traffic and restore failed cluster node
+Storage latency spike impacting reporting and batch jobs,Infrastructure,High,Department Wide,35,2,Multiple Services,Inspect storage backend performance and IOPS saturation
+Hypervisor issue affecting several virtual machines,Infrastructure,High,Department Wide,42,3,Multiple Services,Migrate VMs and review host hardware alerts
+Multiple servers running out of memory across app tier,Infrastructure,High,Department Wide,30,3,Multiple Services,Scale application tier and analyze memory consumption
+Patch deployment caused service restarts on multiple hosts,Infrastructure,High,Multiple Users,18,2,Multiple Services,Rollback patch and validate host stability
+
+Primary compute cluster unavailable across production services,Infrastructure,Critical,System Wide,500,4,Core Platform,Recover cluster control plane and restore production nodes
+Data center power event impacted core compute environment,Infrastructure,Critical,System Wide,1000,5,Core Platform,Fail over workloads and coordinate facility recovery
+Shared storage failure affecting application and database tiers,Infrastructure,Critical,System Wide,650,4,Core Platform,Restore SAN connectivity and remount dependent systems
+Virtualization platform outage impacting all hosted services,Infrastructure,Critical,System Wide,720,5,Core Platform,Recover hypervisor platform and prioritize critical workloads
+
+Application throwing 500 internal server error for one user workflow,Application,Medium,Single User,1,1,Single Service,Review application logs and stack trace for failed request
+Single user unable to submit online reimbursement form,Application,Low,Single User,1,1,Single Service,Check frontend validation and backend submission endpoint
+One mobile app session crashes during profile update,Application,Medium,Single User,1,1,Single Service,Inspect crash logs and recent mobile release changes
+User sees blank page on analytics dashboard,Application,Medium,Single User,1,1,Single Service,Review frontend assets and browser console errors
+One employee cannot generate invoice PDF from portal,Application,Medium,Single User,1,1,Single Service,Check report generation service and template rendering
+Single request fails with 502 on internal app,Application,Medium,Single User,1,1,Single Service,Inspect upstream service health and reverse proxy logs
+
+Several users unable to submit timesheets after release,Application,High,Multiple Users,9,1,Single Service,Rollback release or patch validation issue
+Background job failure delaying notifications for multiple users,Application,High,Multiple Users,14,2,Multiple Services,Inspect scheduler logs and retry failed jobs
+API regression affecting web and mobile checkout flows,Application,High,Department Wide,28,2,Multiple Services,Review deployment diff and restore stable API version
+Frontend outage preventing multiple staff from accessing dashboard,Application,High,Multiple Users,16,1,Single Service,Rebuild frontend bundle and validate CDN propagation
+Search function failing across CRM and support portal,Application,High,Department Wide,36,2,Multiple Services,Inspect shared search service and application integration
+Users reporting errors in both approval and reporting modules,Application,High,Department Wide,44,2,Multiple Services,Check shared app dependencies and module level exceptions
+
+Core business application unavailable company wide,Application,Critical,System Wide,400,4,Core Platform,Activate incident response and restore primary application stack
+Major release caused outage in portal API and mobile app,Application,Critical,System Wide,550,4,Core Platform,Rollback release and validate all critical services
+Company wide ERP application failure blocking transactions,Application,Critical,System Wide,700,5,Core Platform,Recover ERP services and coordinate business recovery
+Central workflow platform down affecting all internal departments,Application,Critical,System Wide,480,4,Core Platform,Restore workflow engine and validate upstream dependencies
+
+Database connection timeout in production for one service,Database,High,Single User,1,1,Single Service,Inspect connection pool and database health for impacted app
+Single report query taking excessive time to complete,Database,Medium,Single User,1,1,Single Service,Optimize query and review execution plan
+One database backup job failed overnight,Database,Medium,Single User,1,1,Single Service,Check backup target credentials and agent status
+Single app encounters deadlock during record update,Database,High,Single User,1,1,Single Service,Review transaction logic and lock contention
+User request fails due to stale database connection,Database,Medium,Single User,1,1,Single Service,Recycle connection pool and validate DB listener stability
+One replica database shows increasing lag,Database,Medium,Single User,1,1,Single Service,Inspect replication process and network throughput
+
+Replication lag increasing on standby database affecting reports,Database,High,Multiple Users,12,1,Single Service,Check replication backlog and disk I/O on standby
+Slow query execution affecting reporting dashboard for finance team,Database,High,Department Wide,32,2,Multiple Services,Optimize indexes and tune heavy reporting queries
+Database deadlocks detected in order and billing services,Database,High,Department Wide,24,2,Multiple Services,Identify conflicting transactions and reduce lock duration
+Connection pool exhaustion impacting API and worker services,Database,High,Department Wide,38,2,Multiple Services,Increase pool size and fix connection leaks
+Primary database CPU spike slowing multiple business apps,Database,High,Department Wide,45,3,Multiple Services,Throttle expensive queries and scale DB compute
+Backup storage issue affecting multiple database jobs,Database,High,Multiple Users,18,2,Multiple Services,Restore backup storage path and rerun failed backups
+
+Primary production database unavailable across core platforms,Database,Critical,System Wide,520,4,Core Platform,Fail over to standby and restore primary database service
+Database cluster outage impacting ERP CRM and payroll,Database,Critical,System Wide,610,4,Core Platform,Recover cluster quorum and restore dependent applications
+Shared database storage corruption affecting multiple services,Database,Critical,System Wide,430,4,Core Platform,Isolate corrupted volume and recover from safe backups
+Enterprise data platform unavailable for all transactional apps,Database,Critical,System Wide,800,5,Core Platform,Restore data platform and validate cross service connectivity
+
+Unauthorized login attempt from unknown IP on one account,Security,Medium,Single User,1,1,Single Service,Block source IP and review account activity
+Antivirus alert triggered on one employee workstation,Security,Medium,Single User,1,1,Single Service,Isolate endpoint and run full malware scan
+Suspicious email attachment reported by one user,Security,Low,Single User,1,1,Single Service,Quarantine attachment and scan mailbox
+Single privileged account added to wrong admin group,Security,High,Single User,1,1,Single Service,Remove elevated access and audit permission changes
+One user reports possible phishing link click,Security,Medium,Single User,1,1,Single Service,Reset credentials and inspect endpoint telemetry
+Single endpoint detects suspicious PowerShell execution,Security,High,Single User,1,1,Single Service,Isolate host and review script origin
+
+Multiple MFA failures detected across several accounts,Security,High,Multiple Users,10,1,Single Service,Investigate brute force activity and enforce MFA policy
+Malware alerts triggered on several employee laptops,Security,High,Multiple Users,14,2,Multiple Services,Contain endpoints and run coordinated malware response
+Privilege escalation attempts detected on multiple servers,Security,Critical,Department Wide,26,3,Multiple Services,Contain affected hosts and review privileged access paths
+Suspicious outbound traffic observed from several application servers,Security,Critical,Department Wide,35,3,Multiple Services,Block egress traffic and perform compromise assessment
+Email phishing campaign reported by multiple departments,Security,High,Department Wide,60,2,Multiple Services,Quarantine campaign and alert affected users
+Multiple accounts show unusual login geolocation patterns,Security,High,Multiple Users,18,2,Multiple Services,Review sign in risk events and force credential reset
+
+Security monitoring outage impacting central detection platform,Security,Critical,System Wide,500,4,Core Platform,Restore SIEM ingestion and validate detection coverage
+Ransomware indicators found across shared file and backup servers,Security,Critical,System Wide,700,5,Core Platform,Isolate infected systems and activate incident response plan
+Company wide phishing compromise affecting multiple services,Security,Critical,System Wide,450,4,Core Platform,Contain compromised accounts and rotate credentials broadly
+Core endpoint protection failure leaves all managed devices unprotected,Security,Critical,System Wide,900,4,Core Platform,Restore endpoint protection service and verify policy enforcement
+
+Teams call audio not working for one employee,Collaboration,Low,Single User,1,1,Single Service,Check Teams client settings and device permissions
+Single shared mailbox not visible in Outlook,Collaboration,Low,Single User,1,1,Single Service,Refresh Outlook profile and verify mailbox permissions
+One employee calendar invite not syncing to phone,Collaboration,Low,Single User,1,1,Single Service,Check mobile sync policy and account configuration
+Single user unable to join video meeting from desktop client,Collaboration,Low,Single User,1,1,Single Service,Inspect client version and meeting permissions
+One user reports delayed email delivery,Collaboration,Low,Single User,1,1,Single Service,Check mailbox quota and mail routing for that account
+Single user cannot access shared channel in Teams,Collaboration,Low,Single User,1,1,Single Service,Validate channel membership and Teams sync status
+
+Email delivery delayed for multiple users,Collaboration,Medium,Multiple Users,12,1,Single Service,Inspect mail flow queues and service advisories
+Video meetings dropping for remote staff in one team,Collaboration,Medium,Multiple Users,15,1,Single Service,Review conferencing quality and network path stability
+Several users cannot access shared mailbox,Collaboration,Medium,Multiple Users,9,1,Single Service,Check mailbox permissions and Exchange service health
+Calendar sync issues affecting one department,Collaboration,Medium,Department Wide,30,1,Single Service,Inspect Exchange sync service and mobile policy
+Teams presence status delayed for multiple employees,Collaboration,Medium,Multiple Users,10,1,Single Service,Review Teams service health and client connectivity
+Users unable to access both mail and calendar features,Collaboration,High,Department Wide,44,2,Multiple Services,Inspect Exchange service dependencies and restore sync services
+
+Corporate email outage affecting all employees,Collaboration,Critical,System Wide,650,4,Core Platform,Restore mail transport services and validate mail flow
+Company wide Teams outage impacting meetings chat and calling,Collaboration,Critical,System Wide,720,4,Core Platform,Recover collaboration platform and confirm service restoration
+Central messaging platform unavailable across email calendar and chat,Collaboration,Critical,System Wide,800,5,Core Platform,Restore core messaging services and dependent gateways
+Organization wide communication outage affecting remote work tools,Collaboration,Critical,System Wide,900,4,Core Platform,Fail over collaboration services and notify all users
+
+New employee unable to access payroll application,Access Management,Low,Single User,1,1,Single Service,Verify role assignment and grant required access
+Manager requests access but still cannot open reporting dashboard,Access Management,Low,Single User,1,1,Single Service,Review approval and provision least privilege access
+One contractor added to incorrect security group,Access Management,Medium,Single User,1,1,Single Service,Remove wrong group membership and validate access
+Single user loses access after role change in HR system,Access Management,Medium,Single User,1,1,Single Service,Resync role mapping and reprovision access
+One employee cannot access finance folder after transfer,Access Management,Low,Single User,1,1,Single Service,Check folder ACL and update entitlements
+Single privileged request stuck in approval workflow,Access Management,Low,Single User,1,1,Single Service,Review workflow state and complete pending approval
+
+Several users missing access to new application module,Access Management,Medium,Multiple Users,11,1,Single Service,Validate group mapping and bulk provision missing roles
+Department staff cannot access shared finance resources,Access Management,High,Department Wide,28,2,Multiple Services,Review entitlements and restore group based access
+Role provisioning delay affecting payroll and HR tools,Access Management,High,Multiple Users,17,2,Multiple Services,Inspect provisioning jobs and replay failed sync tasks
+Incorrect group sync removed access for multiple employees,Access Management,High,Department Wide,39,2,Multiple Services,Restore correct groups and rerun entitlement sync
+Pending approvals causing access delays across one department,Access Management,Medium,Department Wide,25,1,Single Service,Clear approval backlog and validate policy routing
+Multiple users granted wrong access after directory sync issue,Access Management,High,Department Wide,42,3,Multiple Services,Correct access assignments and audit entitlement changes
+
+Terminated user accounts still active across key systems,Access Management,Critical,Department Wide,22,3,Multiple Services,Disable active accounts and audit deprovisioning workflow
+Provisioning platform outage affecting access to many business apps,Access Management,Critical,System Wide,430,4,Core Platform,Restore provisioning service and replay queued jobs
+Company wide entitlement sync failure impacting application access,Access Management,Critical,System Wide,500,4,Core Platform,Recover IAM sync platform and validate downstream access
+Access control outage affecting payroll ERP and reporting tools,Access Management,Critical,System Wide,380,4,Core Platform,Restore IAM services and prioritize critical role provisioning
+
+# -------- Authentication (Login / SSO / MFA) --------
+
+User cannot login to application after SSO outage,Authentication,High,Multiple Users,12,2,Multiple Services,Restore SSO service and validate identity provider
+Employees unable to authenticate to portal due to MFA failure,Authentication,High,Multiple Users,15,1,Single Service,Check MFA provider and unlock affected accounts
+SSO login failing across multiple business applications,Authentication,Critical,System Wide,400,4,Core Platform,Recover identity provider and restore authentication services
+Multiple users receive login error on sign in page,Authentication,High,Multiple Users,10,1,Single Service,Inspect authentication logs and reset session tokens
+All users unable to login to company portal due to IdP outage,Authentication,Critical,System Wide,600,4,Core Platform,Failover identity provider and restore access
+Users unable to sign in after password policy update,Authentication,High,Multiple Users,18,1,Single Service,Rollback policy and validate authentication rules
+MFA service unavailable preventing login for several users,Authentication,High,Multiple Users,20,1,Single Service,Restore MFA service and reprocess login attempts
+Authentication failure across VPN and internal apps,Authentication,Critical,System Wide,500,4,Core Platform,Check identity federation and restore authentication layer
+Login attempts failing with invalid token error across systems,Authentication,High,Department Wide,40,2,Multiple Services,Inspect token service and refresh auth keys
+SSO session expired unexpectedly for multiple employees,Authentication,Medium,Multiple Users,14,1,Single Service,Reset session handling and review token expiry config
+
+
+# -------- Access Management (Roles / Permissions / Entitlements) --------
+
+User does not have access to payroll application after role change,Access Management,Medium,Single User,1,1,Single Service,Update role mapping and reassign permissions
+Multiple users missing access to HR module after deployment,Access Management,High,Multiple Users,12,1,Single Service,Fix role provisioning and update group mappings
+Department users cannot access finance reports due to permission issue,Access Management,High,Department Wide,35,2,Multiple Services,Review ACL and restore correct entitlements
+Users assigned wrong roles after directory sync,Access Management,High,Multiple Users,18,2,Multiple Services,Correct group assignments and rerun sync
+Access request approved but access not provisioned in system,Access Management,Medium,Single User,1,1,Single Service,Investigate provisioning workflow and complete request
+Multiple employees unable to access shared drive due to permission error,Access Management,High,Multiple Users,20,1,Single Service,Fix file permissions and group membership
+Provisioning delay causing access issues across new employees,Access Management,Medium,Multiple Users,15,1,Single Service,Review onboarding workflow and provisioning jobs
+Incorrect role assignment causing access denial in application,Access Management,Medium,Single User,1,1,Single Service,Correct role assignment and validate access
+Bulk user provisioning failed after IAM update,Access Management,High,Department Wide,50,2,Multiple Services,Fix IAM sync and retry provisioning jobs
+Users unable to access application due to missing entitlements,Access Management,High,Multiple Users,22,1,Single Service,Assign correct entitlements and validate access
+

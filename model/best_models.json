@@ -1,0 +1,8 @@
+{
+  "category_model": "logistic_regression_balanced",
+  "severity_model": "logistic_regression_balanced_text_plus_structured_features",
+  "impact_scope_model": "logistic_regression_balanced",
+  "category_weighted_f1": 0.5737606837606838,
+  "severity_weighted_f1": 0.5335097001763668,
+  "impact_scope_weighted_f1": 0.7644444444444445
+}
