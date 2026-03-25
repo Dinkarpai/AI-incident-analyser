@@ -6,6 +6,17 @@ An intelligent system that analyzes IT incident logs, classifies issues, estimat
 
 ## 🔥 Key Features
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- 🧠 NLP-based classification (Category, Severity, Impact Scope)
+- ⚡ Priority assignment (P1–P4)
+- 📊 Impact estimation (users affected, services impacted)
+- 🔍 Similarity-based resolution suggestion
+- 📈 CSV batch analysis with charts
+- 🌐 FastAPI backend + Streamlit frontend
+=======
+>>>>>>> 986ca8f
 - 🧠 **NLP-based classification**
   - Category (Authentication, Infrastructure, Database, etc.)
   - Severity (Low → Critical)
@@ -30,11 +41,37 @@ An intelligent system that analyzes IT incident logs, classifies issues, estimat
 - 🌐 **Full Stack App**
   - FastAPI backend
   - Streamlit dashboard
+<<<<<<< HEAD
+=======
+>>>>>>> 4f24aae (Initial commit - AI Incident Log Analyzer)
+>>>>>>> 986ca8f
 
 ---
 
 ## 🧠 Tech Stack
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- Python  
+- FastAPI  
+- Streamlit  
+- Scikit-learn  
+- Pandas / NumPy  
+- Matplotlib  
+
+---
+
+## 📊 Example
+
+### Input:
+
+Multiple users cannot access payroll and HR applications after SSO outage
+
+
+### Output:
+=======
+>>>>>>> 986ca8f
 - Python
 - FastAPI
 - Streamlit
@@ -49,19 +86,74 @@ An intelligent system that analyzes IT incident logs, classifies issues, estimat
 **Input:**
 
 **Output:**
+<<<<<<< HEAD
+=======
+>>>>>>> 4f24aae (Initial commit - AI Incident Log Analyzer)
+>>>>>>> 986ca8f
 - Category: Authentication  
 - Impact: Multiple Users  
 - Severity: High  
 - Priority: P2  
 - Suggested Resolution: Restore SSO service and validate identity provider  
 
+<<<<<<< HEAD
+=======
+ HEAD
+### Explanation:
+The system identifies this as an authentication issue caused by an SSO outage affecting multiple users. Based on impact and severity, it assigns priority P2 and retrieves a similar historical incident to suggest an appropriate resolution.
+
+=======
+>>>>>>> 4f24aae (Initial commit - AI Incident Log Analyzer)
+>>>>>>> 986ca8f
 ---
 
 ## 🚀 How to Run
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+### 1. Clone the repository
+```bash
+git clone https://github.com/dinkarpai/AI-incident-analyser.git
+cd AI-incident-analyser
+
+### 2. Create a virtual enviroment
+
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+
+### 3. Install Dependencies
+
+pip install -r requirements.txt
+
+### 4. Train Models
+
+python model/train.py
+
+### 5. Start Backend (FastAPI)
+
+python -m uvicorn app.main:app --reload
+
+### 6. Run Frontend (Streamlit)
+
+streamlit run frontend/streamlit_app.py
+
+
+### Project Structure
+
+app/         → FastAPI backend
+model/       → Model training & saved models
+frontend/    → Streamlit UI
+data/        → Incident dataset
+=======
+>>>>>>> 986ca8f
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/<your-username>/AI-incident-analyser.git
 cd AI-incident-analyser
 git clone https://github.com/dinkarpai/AI-incident-analyser.git
 cd AI-incident-analyser
+<<<<<<< HEAD
+=======
+>>>>>>> 4f24aae (Initial commit - AI Incident Log Analyzer)
+>>>>>>> 986ca8f
